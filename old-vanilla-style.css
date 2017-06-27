@@ -1,52 +1,9 @@
-#articles {
-  margin: 0;
-  width: 70%;
-}
-#articles h1 {
-  text-align: left;
-}
-#articles .article {
-  width: 100%;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px 0;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-}
-#articles .article div {
-  padding: 10px;
-}
-#articles .article p {
-  color: #666666;
-}
-#articles .article span {
-  font-size: 0.8em;
-  color: grey;
-}
-#articles .article .article-actions {
-  margin-top: 10px;
-  border-top: 1px dashed rgba(0, 0, 0, 0.1);
-  padding-top: 10px;
-}
-.top-border {
-  border-top: 1px dashed rgba(0, 0, 0, 0.1);
-  padding-top: 10px;
-}
-.opacity-transitions {
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -ms-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
   font-family: open sans, arial, sans-serif;
 }
+
 #page-header {
   position: fixed;
   z-index: 10;
@@ -56,6 +13,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
+
 #page-logo {
   color: white;
   font-size: 1.3em;
@@ -65,13 +23,16 @@ body {
   margin-top: 10px;
   font-weight: bold;
 }
+
 nav {
   display: inline-block;
   float: right;
 }
+
 nav ul {
   padding: 0;
 }
+
 nav a {
   display: inline-block;
   vertical-align: top;
@@ -86,17 +47,20 @@ nav a {
   -ms-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
+
+nav a > li {
+  list-style: none;
+}
+
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0,0,0, 0.1);
   -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   -ms-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-nav a li {
-  list-style: none;
-}
+
 #container {
   background: #FDFDFD;
   padding-top: 100px;
@@ -104,21 +68,62 @@ nav a li {
   width: 100%;
   min-width: 1200px;
 }
-#articles,
-#sidebar {
+
+#articles, #sidebar {
   display: inline-block;
   vertical-align: top;
   padding: 20px;
   margin: 0;
   box-sizing: border-box;
 }
+
+#articles {
+  margin: 0;
+  width: 70%;
+}
+
 #sidebar {
   background-color: #353535;
   color: white;
   margin: 0;
-  width: -100vh;
+  width: 29.6%;
   margin-top: 89px;
 }
+
+#articles > h1 {
+  text-align: center;
+}
+
+#articles > .article {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,0,0, .1);
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.article > div {
+  padding: 10px;
+}
+
+.article p {
+  color: #666666;
+}
+
+.article span {
+  font-size: 0.8em;
+  color: grey;
+}
+
+.article .article-actions {
+  margin-top: 10px;
+  border-top: 1px dashed rgba(0,0,0, .3);
+  padding-top: 10px;
+}
+
 .btn {
   padding: 10px 30px;
   border: 0;
@@ -130,50 +135,59 @@ nav a li {
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0.8;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -ms-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
+
 .btn:hover {
   opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -ms-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
+
 .btn-primary {
   background-color: orange;
 }
+
 .btn-secondary {
   background-color: grey;
 }
+
 #sidebar > h2 {
   margin: 0;
   padding: 0;
 }
+
 #sidebar form {
   padding: 10px 0;
 }
+
 .form-group {
   padding: 5px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .form-group label {
   font-size: 0.8em;
   padding: 5px 0;
   text-transform: uppercase;
 }
+
 .form-group .form-input {
   padding: 5px 10px;
   font-size: 0.9em;
   outline: none;
-  border: 1px solid rbga(0, 0, 0, 0.1);
+  border: 1px solid rbga(0,0,0, 0.1);
 }
+
 #page-footer {
   background-color: #353535;
   padding: 20px 0;
