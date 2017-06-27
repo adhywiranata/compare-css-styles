@@ -1,14 +1,14 @@
 # Compare CSS Preprocessors
 
 - Vanilla CSS
-- **LESS**
-- SASS
+- LESS
+- **SASS**
 - PostCSS
 
-## Installing less
+## Installing sass
 
-``npm install -g less``
+``gem install sass``
 
-## Transpiling .less to .css
+## Transpiling .scss to .css
 
-``lessc style.less style.css``
+``sass style.scss style.css``

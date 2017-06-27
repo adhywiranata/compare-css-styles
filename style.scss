@@ -1,23 +1,20 @@
-// importing articles less
-@import "articles.less";
-
-// constant variables
-@dark: #353535;
-@orange: orange;
-@green: teal;
-@grey: grey;
-@white: white;
-@dark-white: #FDFDFD;
-@darker-white: #F5F5F5;
-@light-grey: rgba(0,0,0, 0.1);
+// constants variables
+$dark: #353535;
+$orange: orange;
+$green: teal;
+$grey: grey;
+$white: white;
+$dark-white: #FDFDFD;
+$darker-white: #F5F5F5;
+$light-grey: rgba(0,0,0, 0.1);
 
 // mixins
-.top-border {
-  border-top: 1px dashed @light-grey;
+@mixin top-border {
+  border-top: 1px dashed $light-grey;
   padding-top: 10px;
 }
 
-.opacity-transitions {
+@mixin opacity-transitions {
   -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
@@ -26,14 +23,13 @@
 }
 
 // parameter mixin
-.color-transitions(@duration) {
-  -webkit-transition: background-color @duration;
-  -moz-transition: background-color @duration;
-  -o-transition: background-color @duration;
-  -ms-transition: background-color @duration;
-  transition: background-color @duration;
+@mixin color-transitions($duration) {
+  -webkit-transition: background-color $duration;
+  -moz-transition: background-color $duration;
+  -o-transition: background-color $duration;
+  -ms-transition: background-color $duration;
+  transition: background-color $duration;
 }
-
 
 html, body {
   padding: 0;
@@ -41,12 +37,14 @@ html, body {
   font-family: open sans, arial, sans-serif;
 }
 
+@import "articles.scss";
+
 #page-header {
   position: fixed;
   z-index: 10;
   top: 0;
   width: 100%;
-  background-color: @green;
+  background-color: $green;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -75,10 +73,10 @@ nav {
     color: #FDFDFD;
     text-transform: uppercase;
     text-decoration: none;
-    .color-transitions(0.5s);
+    @include color-transitions(0.5s);
     &:hover {
-      background-color: @light-grey;
-      .color-transitions(0.5s);
+      background-color: $light-grey;
+      @include color-transitions(0.5s);
     }
     li {
       list-style: none;
@@ -87,7 +85,7 @@ nav {
 }
 
 #container {
-  background: @dark-white;
+  background: $dark-white;
   padding-top: 100px;
   box-sizing: border-box;
   width: 100%;
@@ -103,37 +101,37 @@ nav {
 }
 
 #sidebar {
-  background-color: @dark;
-  color: @white;
+  background-color: $dark;
+  color: $white;
   margin: 0;
-  width: 100vh - 200px; // Less math operations
+  width: 40vh;
   margin-top: 89px;
 }
 
 .btn {
   padding: 10px 30px;
   border: 0;
-  background-color: @green;
-  color: @white;
+  background-color: $green;
+  color: $white;
   outline: none;
   font-weight: bold;
   font-size: 1em;
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0.8;
-  .opacity-transitions;
+  @include opacity-transitions;
   &:hover {
     opacity: 1;
-    .opacity-transitions;
+    @include opacity-transitions;
   }
 }
 
 .btn-primary {
-  background-color: @orange;
+  background-color: $orange;
 }
 
 .btn-secondary {
-  background-color: @grey;
+  background-color: $grey;
 }
 
 #sidebar > h2 {
@@ -166,9 +164,9 @@ nav {
 }
 
 #page-footer {
-  background-color: @dark;
+  background-color: $dark;
   padding: 20px 0;
   width: 100%;
   text-align: center;
-  color: @white;
+  color: $white;
 }
