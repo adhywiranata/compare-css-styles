@@ -2,8 +2,8 @@
 
 - Vanilla CSS
 - LESS
-- **SASS**
-- PostCSS - CSSNext
+- SASS
+- **PostCSS - CSSNext**
 
 ## Installing postcss
 
