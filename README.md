@@ -3,12 +3,20 @@
 - Vanilla CSS
 - LESS
 - **SASS**
-- PostCSS
+- PostCSS - CSSNext
 
-## Installing sass
+## Installing postcss
 
-``gem install sass``
+``npm install -g postcss``
 
-## Transpiling .scss to .css
+## Transpiling .pcss to .css
 
-``sass style.scss style.css``
+``postcss style.pcss [--use library] -o style.css``
+
+for our example, we're using CSSNext
+
+**installing**
+``npm install -g postcss-cssnext``
+
+## Transpiling .pcss to .css
+``postcss style.pcss --use postcss-cssnext -o style.css``
